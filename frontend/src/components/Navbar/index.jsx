@@ -11,7 +11,7 @@ import AutoStoriesIcon from "@mui/icons-material/AutoStories";
 export default function Navbar() {
    return (
       <Box sx={{ flexGrow: 1 }}>
-         <AppBar position="static">
+         <AppBar position="static" sx={{ backgroundColor: "#005D92" }}>
             <Toolbar>
                <IconButton
                   size="large"
