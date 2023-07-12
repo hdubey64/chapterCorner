@@ -5,15 +5,18 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
-import BasicRating from "../Rating";
+import moment from "moment";
+import Rating from "@mui/material/Rating";
+import Stack from "@mui/material/Stack";
 import DeleteIcon from "@mui/icons-material/Delete";
 import EditIcon from "@mui/icons-material/Edit";
 
-export default function MediaCard() {
+export default function MediaCard({ book, _deleteBook }) {
    return (
       <Card
          sx={{
             maxWidth: 300,
+
             backgroundColor: "#005D92",
             color: "white",
             my: 3,
@@ -27,11 +30,24 @@ export default function MediaCard() {
                alignItems: "center",
             }}
          >
-            <CardMedia
-               sx={{ height: 170, width: 300 }}
-               image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdfhMEEdvPSR2zIdXgaxhGLRKhw3ft9ZRSnWUdKG8zYBQ1vpj9suG77t1JevKZ3YlpAwU&usqp=CAU"
-               title="green iguana"
-            />
+            <Box
+               sx={{
+                  height: 170,
+                  width: 300,
+                  backgroundColor: "white",
+                  display: "grid",
+                  placeItems: "center",
+               }}
+            >
+               <CardMedia
+                  sx={{ height: 150, width: 130 }}
+                  image={
+                     book?.imageUrl ||
+                     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdfhMEEdvPSR2zIdXgaxhGLRKhw3ft9ZRSnWUdKG8zYBQ1vpj9suG77t1JevKZ3YlpAwU&usqp=CAU"
+                  }
+                  title="green iguana"
+               />
+            </Box>
          </Box>
          <CardContent className="card">
             <Box>
@@ -43,11 +59,17 @@ export default function MediaCard() {
                >
                   <Typography
                      gutterBottom
-                     variant="h5"
+                     variant="h6"
                      component="div"
-                     sx={{ fontWeight: "bold" }}
+                     sx={{
+                        fontWeight: "bold",
+                        width: "180px",
+                        whiteSpace: "nowrap",
+                        overflow: "hidden",
+                        textOverflow: "ellipsis",
+                     }}
                   >
-                     The Hobbit
+                     {book.title}
                   </Typography>
                   <Typography
                      gutterBottom
@@ -55,7 +77,7 @@ export default function MediaCard() {
                      component="div"
                      sx={{ textAlign: "right" }}
                   >
-                     1937-09-21
+                     {moment(book.publicationDate).format("ll")}
                   </Typography>
                </Box>
                <Box
@@ -65,7 +87,14 @@ export default function MediaCard() {
                   }}
                >
                   <Typography gutterBottom variant="p" component="div">
-                     <BasicRating />
+                     <Stack>
+                        <Rating
+                           name="half-rating-read"
+                           defaultValue={book?.rating || 0}
+                           precision={0.5}
+                           readOnly
+                        />
+                     </Stack>
                   </Typography>
                   <Typography
                      gutterBottom
@@ -73,7 +102,7 @@ export default function MediaCard() {
                      component="div"
                      sx={{ textAlign: "right" }}
                   >
-                     $14.99
+                     ${book.price}
                   </Typography>
                </Box>
                <Box
@@ -83,7 +112,7 @@ export default function MediaCard() {
                   }}
                >
                   <Typography gutterBottom variant="p" component="div">
-                     J.R.R. Tolkien"
+                     {book.author}
                   </Typography>
                   <Typography
                      gutterBottom
@@ -91,13 +120,21 @@ export default function MediaCard() {
                      component="div"
                      sx={{ textAlign: "right" }}
                   >
-                     Fantasy
+                     {book.genre}
                   </Typography>
                </Box>
                <Box>
-                  <Typography gutterBottom variant="p" component="div">
-                     Bilbo Baggins' unexpected adventure with dwarves and a
-                     powerful ring
+                  <Typography
+                     gutterBottom
+                     variant="p"
+                     component="div"
+                     sx={{
+                        whiteSpace: "nowrap",
+                        overflow: "hidden",
+                        textOverflow: "ellipsis",
+                     }}
+                  >
+                     {book.description}...
                   </Typography>
                </Box>
             </Box>
@@ -108,7 +145,7 @@ export default function MediaCard() {
                gridTemplateColumns: "repeat(2, 1fr)",
             }}
          >
-            <Button size="small" sx={{ color: "white" }}>
+            <Button size="small" sx={{ color: "white" }} onClick={_deleteBook}>
                <DeleteIcon sx={{ fontSize: 35 }} />
             </Button>
             <Button size="small" sx={{ color: "white" }}>
