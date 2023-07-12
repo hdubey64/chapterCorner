@@ -2,6 +2,11 @@ const mongoose = require("mongoose");
 
 const BookModel = new mongoose.Schema(
    {
+      imageUrl: {
+         type: String,
+         required: true,
+         unique: [true, "Alredy exist"],
+      },
       title: {
          type: String,
          required: true,
@@ -27,7 +32,7 @@ const BookModel = new mongoose.Schema(
          type: String,
          required: true,
       },
-      quantity: {
+      rating: {
          type: Number,
          required: true,
          default: 0,
