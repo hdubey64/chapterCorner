@@ -7,13 +7,14 @@ import Button from "@mui/material/Button";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 import AutoStoriesIcon from "@mui/icons-material/AutoStories";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
    return (
       <Box sx={{ flexGrow: 1 }}>
          <AppBar position="static" sx={{ backgroundColor: "#005D92" }}>
             <Toolbar>
-               <IconButton
+               {/*} <IconButton
                   size="large"
                   edge="start"
                   color="inherit"
@@ -21,11 +22,25 @@ export default function Navbar() {
                   sx={{ mr: 2 }}
                >
                   <MenuIcon />
-               </IconButton>
-               <Typography variant="h5" component="div" sx={{ flexGrow: 1 }}>
-                  Chapter <AutoStoriesIcon /> Corner
+   </IconButton>*/}
+
+               <Typography variant="h5" component="div">
+                  <Link to="/" style={{ textDecoration: "none" }}>
+                     <Box
+                        sx={{
+                           fontSize: "2rem",
+                           fontWeight: "bold",
+                           color: "white",
+                        }}
+                     >
+                        Chapter <AutoStoriesIcon /> Corner
+                     </Box>
+                  </Link>
                </Typography>
-               <Button color="inherit">+ Add book</Button>
+
+               <Button href="/add" sx={{ bgcolor: "white", color: "#005D92" }}>
+                  + Add book
+               </Button>
             </Toolbar>
          </AppBar>
       </Box>
