@@ -1,6 +1,7 @@
 require("dotenv").config();
 const express = require("express");
 const app = express();
+const cors = require("cors");
 const mongoose = require("mongoose");
 const config = require("./config");
 
@@ -19,6 +20,7 @@ mongoose
 
 // Middlewares
 app.use(express.json());
+app.use(cors());
 
 const statusFunction = (req, res) => {
    return res.status(200).json({
