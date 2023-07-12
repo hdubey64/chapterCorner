@@ -16,36 +16,46 @@ const getBookById = async (req, res) => {
 };
 
 const createBooks = async (req, res) => {
-   const {
-      title,
-      author,
-      genre,
-      price,
-      publicationDate,
-      description,
-      quantity,
-   } = req.body;
+   try {
+      const {
+         imageUrl,
+         title,
+         author,
+         genre,
+         price,
+         publicationDate,
+         description,
+         rating,
+      } = req.body;
 
-   const book = new BookModel({
-      title: title,
-      author: author,
-      genre: genre,
-      price: price,
-      publicationDate: publicationDate,
-      description: description,
-      quantity: quantity,
-   });
+      console.log(req.body);
 
-   const foundBook = await BookModel.findOne({ title });
+      const foundBook = await BookModel.findOne({ title });
 
-   if (foundBook) {
-      return res
-         .status(409)
-         .json({ message: "Book already exist with this tittle!" });
+      if (foundBook) {
+         return res
+            .status(409)
+            .json({ message: "Book already exist with this tittle!" });
+      }
+
+      const book = new BookModel({
+         imageUrl,
+         title,
+         author,
+         genre,
+         price,
+         publicationDate,
+         description,
+         rating,
+      });
+
+      await book.save();
+
+      return res.status(200).json({ book });
+   } catch (error) {
+      console.log(error);
+      return res.status(500).json({ message: "Internal Server Error!" });
    }
-   await book.save();
-
-   return res.status(200).json({ book });
 };
 
 const deleteById = async (req, res) => {
@@ -58,6 +68,7 @@ const deleteById = async (req, res) => {
 const updateBook = async (req, res) => {
    const { _id } = req.params;
    const {
+      imageUrl,
       title,
       author,
       genre,
@@ -70,6 +81,7 @@ const updateBook = async (req, res) => {
    const book = await BookModel.updateOne(
       { _id },
       {
+         imageUrl,
          title,
          author,
          genre,
