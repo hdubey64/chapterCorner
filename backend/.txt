@@ -1,0 +1,111 @@
+{
+  "title": "To Kill a Mockingbird",
+  "author": "Harper Lee",
+  "publicationDate": "July 11, 1960",
+  "rating": 4.3,
+  "price": 12.99,
+  "genre": "Fiction",
+  "description": "A classic novel set in the 1930s, focusing on racial injustice and the loss of innocence.",
+  "imageUrl": "https://m.media-amazon.com/images/I/81gepf1eMqL._AC_UY327_FMwebp_QL65_.jpg"
+}
+
+{
+  "title": "1984",
+  "author": "George Orwell",
+  "publicationDate": "June 8, 1949",
+  "rating": 4.5,
+  "price": 9.99,
+  "genre": "Dystopian Fiction",
+  "description": "A chilling novel depicting a totalitarian society controlled by Big Brother.",
+  "imageUrl": "https://m.media-amazon.com/images/I/81fcLJo+FNL._AC_UY327_FMwebp_QL65_.jpg"
+}
+
+{
+  "title": "The Great Gatsby",
+  "author": "F. Scott Fitzgerald",
+  "publicationDate": "April 10, 1925",
+  "rating": 4.2,
+  "price": 11.99,
+  "genre": "Classic Literature",
+  "description": "A story of wealth, love, and the American Dream in the Jazz Age.",
+  "imageUrl": "https://m.media-amazon.com/images/I/817+192hZyS._AC_UY327_FMwebp_QL65_.jpg"
+}
+{
+  "title": "Pride and Prejudice",
+  "author": "Jane Austen",
+  "publicationDate": "January 28, 1813",
+  "rating": 4.7,
+  "price": 8.99,
+  "genre": "Romantic Fiction",
+  "description": "A witty and charming novel exploring love, class, and societal expectations in 19th-century England.",
+  "imageUrl": "https://m.media-amazon.com/images/I/819HSIKiWdS._AC_UY327_FMwebp_QL65_.jpg"
+}
+{
+  "title": "The Catcher in the Rye",
+  "author": "J.D. Salinger",
+  "publicationDate": "July 16, 1951",
+  "rating": 4.1,
+  "price": 10.99,
+  "genre": "Coming-of-Age Fiction",
+  "description": "A classic novel narrated by a disillusioned teenager navigating the phoniness of the adult world.",
+  "imageUrl": "https://m.media-amazon.com/images/I/7108sdEUEGL._AC_UY327_FMwebp_QL65_.jpg"
+}
+
+{
+  "title": "Harry Potter and the Sorcerer's Stone",
+  "author": "J.K. Rowling",
+  "publicationDate": "June 26, 1997",
+  "rating": 4.8,
+  "price": 14.99,
+  "genre": "Fantasy",
+  "description": "The first book in the beloved Harry Potter series, chronicling the magical adventures of a young wizard.",
+  "imageUrl": "https://m.media-amazon.com/images/I/710ESoXqVPL._AC_UY327_FMwebp_QL65_.jpg"
+}
+
+{
+  "title": "The Hobbit",
+  "author": "J.R.R. Tolkien",
+  "publicationDate": "September 21, 1937",
+  "rating": 4.6,
+  "price": 13.99,
+  "genre": "Fantasy",
+  "description": "A captivating prequel to The Lord of the Rings, following Bilbo Baggins on a quest to reclaim treasure.",
+  "imageUrl": "https://m.media-amazon.com/images/I/71a+5TjuYDL._AC_UY327_FMwebp_QL65_.jpg"
+}
+
+{
+  "title": "The Da Vinci Code",
+  "author": "Dan Brown",
+  "publicationDate": "March 18, 2003",
+  "rating": 4.0,
+  "price": 9.99,
+  "genre": "Thriller",
+  "description": "An intriguing mystery thriller involving art, religion, and secret societies.",
+  "imageUrl": "https://m.media-amazon.com/images/I/71DAQuN7jhL._AC_UY327_FMwebp_QL65_.jpg"
+}
+
+{
+  "title": "The Lord of the Rings: The Fellowship of the Ring",
+  "author": "J.R.R. Tolkien",
+  "publicationDate": "July 29, 1954",
+  "rating": 4.9,
+  "price": 16.99,
+  "genre": "Fantasy",
+  "description": "The first book in the epic fantasy series following the journey to destroy the One Ring.",
+  "imageUrl": "https://m.media-amazon.com/images/I/81YyraOaX1L._AC_UY327_FMwebp_QL65_.jpg"
+}
+
+{
+  "title": "Gone Girl",
+  "author": "Gillian Flynn",
+  "publicationDate": "June 5, 2012",
+  "rating": 4.4,
+  "price": 10.99,
+  "genre": "Mystery",
+  "description": "A gripping psychological thriller revolving around a troubled marriage and a sudden disappearance.",
+  "imageUrl": "https://m.media-amazon.com/images/I/41aEQgTFPoL._AC_UY327_FMwebp_QL65_.jpg"
+}
+
+
+
+
